@@ -1,38 +1,46 @@
 # Tripleten web_project_api_full
 
-    A whole trip for a good explained Back-end project
+    The most completed FullStack project... and maybe the beggining for a new social media app.
+    ... to improve the human brains, of course.
 
 ## Project Overview
 
-This project presents a simple but importat Back-end project using not only Node.js, but Express.js for a eficient workflow and human understanding. As a begginer project, this reflects all the knowledge through how API's are created and the data that is request and sent, and how we receive it as developers.
-
-## Features
-
-- **Semantic JavaScript**: Properly structured code for accessibility
+This project was created recycling two previos projects for the same propositive. After connecting to the Google Cloud, the remote server let this project flow in a clean work. It is interesting and functional create your user and add some cards for the rest of the users who will be able to see the totally of the cards created but not delete the cards which the current user didn't create. I hope you enjoy surfing this, my first FullStack web development project.
 
 ## Technologies Used
 
+### FRONTEND
+
 - Java Script
-- NPM
+- Semantic HTML5
+- BEM metodology
+- Flexbox
+- Grid
+- Text-overflow
+- Hover
+- Pseudo-classes
+- Media queries
+- React JS
+- API
+
+### BACKEND
+
 - Node.js
 - Express.js
-- JSON
+- MongoDB
+- Mongoose
+- Bcryptjs
+- Jsonwebtoken
+- Cors
+- Winston
+- Joi / Celebrate
+- PM2
+- Nginx
+- Automated tests
 
 ## Development Process
 
-This project was developed following the Airbnb rules for a better understanding with the necessary exceptions such as 'console.log', '\_', and some others due the project needs. After have instaled Node.js and then Express.js, as part of the fact we have amazing technologies to make coding even easier everytime better.
-
-![alt text](<https://github.com/maggiegutierrez/web_project_around_express/blob/64421a76b2c14702bb6074bd23bbee64f6cbfc18/Captura%20de%20pantalla%202026-05-20%20a%20la(s)%2011.17.44%E2%80%AFp.m..png>)
-
-## Installation & Setup
-
-Clone the repository:
-bash
-git clone https://github.com/maggiegutierrez/web_project_around_express.git
-Navigate to the project directory:
-bash
-cd web_project_around_express
-Open the local server after run with npm run dev or npm run start (http://localhost:3000).
+This project was developed following the Airbnb rules, using the API with the domain api.maggie.h4ack.me in the Google Cloud remote server. Working with the principles tools as pm2, Joi / celebrate, CORS, winston, NGINX, etc. Which are vital for the correct functionality of a web project... as is this one.
 
 ## Author
 
