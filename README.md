@@ -7,7 +7,7 @@
 
 This project was created recycling two previos projects for the same propositive. After connecting to the Google Cloud, the remote server let this project flow in a clean work. It is interesting and functional create your user and add some cards for the rest of the users who will be able to see the totally of the cards created but not delete the cards which the current user didn't create. I hope you enjoy surfing this, my first FullStack web development project.
 
-<!-- Failed to upload "Grabación de pantalla 2026-07-21 a la(s) 1.42.24 a.m..mov" -->
+https://github.com/user-attachments/assets/6984217c-5ea8-4f6a-85fb-056380712efe
 
 ## Technologies Used
 
