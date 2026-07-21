@@ -4,8 +4,9 @@ import CurrentUserContext from "../../../../contexts/CurrentUserContext";
 
 export default function Card(props) {
   const { currentUser } = useContext(CurrentUserContext);
-  const { name, link, likes } = props.card;
+  const { name, link, likes, owner } = props.card;
   const isLiked = likes.some((id) => id === currentUser._id);
+  const isOwner = owner === currentUser._id;
   const handleOpenPopup = props.handleOpenPopup;
   const handleLikeClick = props.onCardLike;
   const handleDeleteClick = props.onCardDelete;
@@ -23,12 +24,14 @@ export default function Card(props) {
         alt={name}
         onClick={() => handleOpenPopup(ImageComponent)}
       />
-      <button
-        aria-label="Eliminar tarjeta"
-        className="card__delete-button"
-        type="button"
-        onClick={handleDeleteClick}
-      ></button>
+      {isOwner && (
+        <button
+          aria-label="Eliminar tarjeta"
+          className="card__delete-button"
+          type="button"
+          onClick={handleDeleteClick}
+        ></button>
+      )}
       <div className="card__description">
         <h2 className="card__title">{name}</h2>
         <button
