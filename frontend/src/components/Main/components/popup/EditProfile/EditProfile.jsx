@@ -47,7 +47,7 @@ export default function EditProfile(props) {
         placeholder="Nombre"
         type="text"
         minLength="2"
-        maxLength="40"
+        maxLength="30"
         required
         value={name}
         onChange={handleNameChange}
@@ -64,7 +64,7 @@ export default function EditProfile(props) {
         placeholder="Acerca de mí"
         type="text"
         minLength="2"
-        maxLength="200"
+        maxLength="30"
         required
         value={description}
         onChange={handleDescriptionChange}

@@ -137,17 +137,37 @@ function App() {
   }, []);
 
   const handleUpdateUser = (data) => {
-    api.patchUserData(data).then((newData) => {
-      setCurrentUser(newData);
-      handleClosePopup();
-    });
+    api
+      .patchUserData(data)
+      .then((newData) => {
+        setCurrentUser(newData);
+        handleClosePopup();
+      })
+      .catch((error) => {
+        console.error(error);
+        setTooltipStatus({
+          isSuccess: false,
+          message: "Uy, algo salió mal. Por favor, inténtalo de nuevo.",
+        });
+        setIsInfoTooltipOpen(true);
+      });
   };
 
   function handleUpdateAvatar(data) {
-    api.patchAvatar(data).then((newData) => {
-      setCurrentUser(newData);
-      handleClosePopup();
-    });
+    api
+      .patchAvatar(data)
+      .then((newData) => {
+        setCurrentUser(newData);
+        handleClosePopup();
+      })
+      .catch((error) => {
+        console.error(error);
+        setTooltipStatus({
+          isSuccess: false,
+          message: "Uy, algo salió mal. Por favor, inténtalo de nuevo.",
+        });
+        setIsInfoTooltipOpen(true);
+      });
   }
 
   async function handleCardLike(card) {
