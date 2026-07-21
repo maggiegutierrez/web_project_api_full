@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const auth = require("./middlewares/auth");
 const { login, createUser } = require("./controllers/users");
 const errorHandler = require("./middlewares/errors");
+const cors = require("cors");
 const {
   validateCreateUser,
   validateLogin,
