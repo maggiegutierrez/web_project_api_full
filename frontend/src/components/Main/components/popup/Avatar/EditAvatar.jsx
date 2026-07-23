@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
 import CurrentUserContext from "../../../../../contexts/CurrentUserContext";
-import { isImageUrl } from "../../../../../utils/validators";
+import { isValidUrl } from "../../../../../utils/validators";
 
 export default function EditAvatar() {
   const [avatar, setAvatar] = useState("");
@@ -8,7 +8,7 @@ export default function EditAvatar() {
   const onUpdateAvatar = userContext.handleUpdateAvatar;
 
   const avatarError =
-    avatar.trim() && !isImageUrl(avatar)
+    avatar.trim() && !isValidUrl(avatar)
       ? "El enlace debe ser una imagen válida"
       : "";
 
@@ -46,7 +46,7 @@ export default function EditAvatar() {
       <button
         className="button popup__button"
         type="submit"
-        disabled={!avatar.trim() || !isImageUrl(avatar)}
+        disabled={!avatar.trim() || !isValidUrl(avatar)}
       >
         Guardar
       </button>

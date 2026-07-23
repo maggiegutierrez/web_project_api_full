@@ -1,3 +1,4 @@
+//Aunque ponga comillas simples, al guardar el archivo me lo cambia a comillas dobles
 require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");

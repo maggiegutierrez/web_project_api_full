@@ -219,11 +219,7 @@ function App() {
       }}
     >
       <div className="page__content">
-        <Header
-          currentUser={currentUser}
-          isLoggedIn={isLoggedIn}
-          onLogout={handleLogout}
-        />
+        <Header isLoggedIn={isLoggedIn} onLogout={handleLogout} />
         <Routes>
           <Route
             path="/"
@@ -262,25 +258,6 @@ function App() {
               )
             }
           />
-          {/* <Route
-            path="/signup"
-            element={
-              isLoggedIn ? (
-                <Navigate to="/" replace />
-              ) : (
-                <>
-                  <Register handleRegistration={handleRegistration} />
-                  {isInfoTooltipOpen && (
-                    <InfoTooltip
-                      isSuccess={tooltipStatus.isSuccess}
-                      message={tooltipStatus.message}
-                      onClose={handleCloseInfoTooltip}
-                    />
-                  )}
-                </>
-              )
-            }
-          /> */}
           <Route
             path="*"
             element={

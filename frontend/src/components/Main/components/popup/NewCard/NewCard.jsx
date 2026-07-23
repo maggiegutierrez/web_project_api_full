@@ -1,6 +1,6 @@
 import { useContext, useState, useRef } from "react";
 import CurrentUserContext from "../../../../../contexts/CurrentUserContext";
-import { isImageUrl } from "../../../../../utils/validators";
+import { isValidUrl } from "../../../../../utils/validators";
 
 export default function NewCard() {
   const [name, setName] = useState("");
@@ -9,7 +9,7 @@ export default function NewCard() {
   const onAddPlaceSubmit = userContext.handleAddPlaceSubmit;
 
   const linkError =
-    link.trim() && !isImageUrl(link)
+    link.trim() && !isValidUrl(link)
       ? "El enlace debe ser una imagen válida"
       : "";
 
@@ -57,7 +57,7 @@ export default function NewCard() {
       <button
         className="button popup__button"
         type="submit"
-        disabled={!name.trim() || !link.trim() || !isImageUrl(link)}
+        disabled={!name.trim() || !link.trim() || !isValidUrl(link)}
       >
         Crear
       </button>

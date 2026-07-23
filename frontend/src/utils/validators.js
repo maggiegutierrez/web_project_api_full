@@ -1,5 +1,7 @@
-export function isImageUrl(url) {
-  return /\.(jpe?g|png|gif|webp|svg|bmp)(\?.*)?$/i.test(url.trim());
+import validator from "validator";
+
+export function isValidUrl(url) {
+  return validator.isURL(url.trim());
 }
 
 export function isValidEmail(email) {

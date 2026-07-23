@@ -13,3 +13,6 @@ node_modules
 .DS_Store
 .idea
 .vscode
+
+#Solo para recordar el proceso de construcción
+DEPLOYMENT.md

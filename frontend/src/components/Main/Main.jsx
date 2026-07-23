@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from "react";
+import { useContext } from "react";
 import EditIcon from "../../../images/edit-icon.svg";
 import NewCard from "./components/popup/NewCard/NewCard";
 import EditAvatar from "./components/popup/Avatar/EditAvatar";

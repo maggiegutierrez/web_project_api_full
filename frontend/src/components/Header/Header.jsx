@@ -1,10 +1,13 @@
 import logo from "../../../images/logo.png";
 import { useLocation, Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import menuIcon from "../../../images/threeLines.png";
 import closeIcon from "../../../images/close.svg";
+import CurrentUserContext from "../../contexts/CurrentUserContext";
 
-function Header({ isLoggedIn, onLogout, currentUser }) {
+function Header({ isLoggedIn, onLogout }) {
+  const { currentUser } = useContext(CurrentUserContext);
+
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -62,48 +65,6 @@ function Header({ isLoggedIn, onLogout, currentUser }) {
       )}
     </header>
   );
-
-  // const whoIsTheUser = () => {
-  //   if (isLoggedIn) {
-  //     return (
-  //       <>
-  //         <p className="header__user">{currentUser.email}</p>
-  //         <button onClick={onLogout} className="header__logout">
-  //           Cerrar sesión
-  //         </button>
-  //       </>
-  //     );
-  //   }
-
-  //   if (location.pathname === "/signin") {
-  //     return (
-  //       <Link to="/signup" className="header__link">
-  //         Regístrate
-  //       </Link>
-  //     );
-  //   }
-
-  //   if (location.pathname === "/signup") {
-  //     return (
-  //       <Link to="/signin" className="header__link">
-  //         Iniciar sesión
-  //       </Link>
-  //     );
-  //   }
-
-  //   return null;
-  // };
-
-  // return (
-  //   <header className="header page__section">
-  //     <img
-  //       src={logo}
-  //       alt="Around the México logo"
-  //       className="logo header__logo"
-  //     />
-  //     <div className="header__user-info">{whoIsTheUser()}</div>
-  //   </header>
-  // );
 }
 
 export default Header;
